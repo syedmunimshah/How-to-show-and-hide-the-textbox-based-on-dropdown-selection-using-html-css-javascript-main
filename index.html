@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .data {
+            display: none;
+        }
+
+        .back {
+            background-color: aqua;
+            width: 50%;
+            border-style: solid;
+            border-color: black;
+            margin: 10px 0px 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- select sy hidden chez ana  start -->
+
+    <div class="wrapper">
+        <div class="menu">
+            <select id="name">
+                <option selected>Open this select menu</option>
+                <option value="1">one</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">four</option>
+                <option value="5">five</option>
+
+            </select>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="1" class="data">
+            <img src="/one.png" alt="">
+        </div>
+        <div id="2" class="data"> <img src="/2.jpeg" alt=""></div>
+        <div id="3" class="data"> <img src="/3.jpeg" alt=""></div>
+        <div id="4" class="data"> <img src="/four.png" alt=""></div>
+        <div id="5" class="data"> <img src="/5.jpeg" alt=""></div>
+
+    </div>
+        <!-- select sy hidden chez ana  end -->
+
+    <!--  jquery button sy hide and show and toggle hona start -->
+
+    <div id="box" class="back">
+        <h2> text box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem iusto dolores voluptate fuga reiciendis
+            beatae magnam cupiditate optio totam odio.</p>
+
+
+    </div>
+
+    <button id="hidebtn">Hide</button>
+    <button id="showbtn">Show</button>
+    <button id="Togglebtn">Toggle</button>
+
+    <!--  jquery button sy hide and show and toggle hona End -->
+
+
+     <!-- select sy hidden chez ana  start -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#name").on('change', function () {
+                $(".data").hide(); $("#" + $(this).val()).fadeIn(700);
+            })
+                .change();
+        });
+    </script>
+    <!-- select sy hidden chez ana  end -->
+  <!--  jquery button sy hide and show and toggle hona start -->
+    <script>
+        $(document).ready(function () {
+
+            $('#hidebtn').click(function () {
+                $('#box').hide();
+            });
+
+
+            $('#showbtn').click(function () {
+                $('#box').show();
+            });
+
+
+            $('#Togglebtn').click(function () {
+                $('#box').toggle();
+            });
+
+
+        });
+
+    </script>
+      <!--  jquery button sy hide and show and toggle hona End -->
+
+
+
+</body>
+
+</html>
